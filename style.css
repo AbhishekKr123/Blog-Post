@@ -1,12 +1,22 @@
+/*box-sizing :border-box is important as width and height property will consider padding and margin into the size given*/
 *{
     margin:0;
     padding=0;
-    box-shadow: border-box; 
+    box-sizing: border-box; 
 }
 body{
     font-family: Helvetica Neue ,Arial;
     font-size: 18px;    
 }
+/* This is counterpart of float.After we use float property on blog post and other post we will see that author-post will also float randomly.
+   This is where we will give a div element with clearfix class
+*/
+.clearfix:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+
 h1,h2{
     color:#065a09;   
 }
@@ -28,4 +38,25 @@ h2{
 
 .author-text{
     font-size:22px;
+}
+
+.container {
+    width:1140px;
+    margin:20px auto 0 auto;
+}
+
+.blog-post {
+    width:75%;
+    float:left;
+    padding-right: 30px;
+}
+
+.other-post {
+    width:25%;
+    float:left;
+}
+
+.author-post {
+    padding-top:20px;
+    border-top: 1px solid #a09d9d;
 }
